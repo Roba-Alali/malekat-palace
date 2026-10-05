@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-palace-dark: #120B11;
+    --color-palace-plum: #281424;
+    --color-palace-deep: #1A0D18;
+    --color-palace-gold: #C9A86A;
+    --color-palace-gold-light: #E8CF99;
+    --color-palace-ivory: #FBF8F3;
+    --color-palace-rose: #E8C7CE;
+  }
+
+  body {
+    font-family: 'Alexandria', sans-serif;
+    background-color: #120B11;
+    color: #F8F5EE;
+  }
+
+  h1, h2, h3, .font-royal {
+    font-family: 'Amiri', 'Cinzel', 'Cormorant Garamond', serif;
+  }
+
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-serif-en {
+    font-family: 'Cinzel', 'Cormorant Garamond', serif;
+  }
+}
+
+/* Sound Equalizer Animation */
+@keyframes barJump {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+.animate-bar-1 { animation: barJump 1s ease-in-out infinite; }
+.animate-bar-2 { animation: barJump 0.8s ease-in-out infinite 0.2s; }
+.animate-bar-3 { animation: barJump 1.2s ease-in-out infinite 0.4s; }
+.animate-bar-4 { animation: barJump 0.9s ease-in-out infinite 0.1s; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #120B11;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B2035;
+  border-radius: 4px;
+  border: 1px solid rgba(201, 168, 106, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A86A;
+}
+
+/* Shimmer & glow effects */
+.gold-shimmer {
+  background: linear-gradient(90deg, #C9A86A 0%, #F5E3BD 50%, #C9A86A 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Hairline royal border */
+.border-gold-hairline {
+  border-color: rgba(201, 168, 106, 0.2);
+}
+
+.border-gold-glow {
+  border-color: rgba(201, 168, 106, 0.45);
+  box-shadow: 0 0 25px rgba(201, 168, 106, 0.08);
+}
+

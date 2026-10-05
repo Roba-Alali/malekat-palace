@@ -1,0 +1,6 @@
+{
+  "name": "قصر الملكات | MALEKAT PALACE",
+  "description": "الموقع الرسمي لقصر الملكات للأفراح والمناسبات الفاخرة — جولة افتراضية، مصمم ليلتك الملكية، وتجربة حجز تفاعلية متكاملة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
